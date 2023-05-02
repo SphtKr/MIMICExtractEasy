@@ -1,0 +1,12 @@
+[submodule "PyHealth"]
+	path = PyHealth
+	url = https://github.com/SphtKr/PyHealth.git
+	branch = mimic-extract-dataset
+[submodule "mimic-code"]
+	path = mimic-code
+	url = https://github.com/SphtKr/mimic-code.git
+	branch = duckdb-concepts
+[submodule "MIMIC_Extract"]
+	path = MIMIC_Extract
+	url = https://github.com/SphtKr/MIMIC_Extract.git
+	branch = duckdb-support
