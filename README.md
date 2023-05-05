@@ -84,10 +84,9 @@ cd ../mimic-code/mimic-iii/buildmimic/duckdb/
 # install the requirements...
 pip3 install -r ./requirements.txt
 # Build the database!
-# If you are resource constrained (takes about 14GB)... 
-python3 import_duckdb.py ${MIMIC_DATA_DIR} ${DATA_DIR}/mimic3.db --skip-indexes --make-concepts
-# If you have plenty of RAM and disk space (maybe 64GB+ and 45GB+)...
-python3 import_duckdb.py ${MIMIC_DATA_DIR} ${DATA_DIR}/mimic3.db --make-concepts
+python3 import_duckdb.py ${MIMIC_DATA_DIR} ${DATA_DIR}/mimic3.db --skip-indexes
+# Make the concepts (you can do this all in one step but it might run out of memory)...
+python3 import_duckdb.py ${MIMIC_DATA_DIR} ${DATA_DIR}/mimic3.db --skip-tables --make-concepts
 ```
 The above may take some time, it depends a great deal on your hardware.
 
