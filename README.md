@@ -133,4 +133,19 @@ dataset = MIMICExtractDataset(
 )
 dataset.stat()
 dataset.info()
+```
 
+## What else?
+
+You can use the MIMIC-Extract authors' original [Jupyter notebooks](./MIMIC_Extract/notebooks/)
+to run some benchmark ML models. These two are good ones to try and only required the "LEVEL2"
+grouped version of the dataset generated with the commands above:
+
+* [Baselines for Intervention Prediction - Vasopressor.ipynb](./MIMIC_Extract/notebooks/Baselines%20for%20Intervention%20Prediction%20-%20Vasopressor.ipynb)
+* [Baselines for Intervention Prediction - Mechanical Ventilation.ipynb](./MIMIC_Extract/notebooks/Baselines%20for%20Intervention%20Prediction%20-%20Mechanical%20Ventilation.ipynb)
+
+You will need to update the `DATAFILE` variable in the notebook to point to the `all_hourly_data.h5`
+file in your generated dataset.
+
+Note that the sklearn noteboooks require both the "LEVEL2" grouping and the "raw" version, which you can 
+generate by adding the `--no_group_by_level2` argument to the above call to `mimic_direct_extract.py`.
